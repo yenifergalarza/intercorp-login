@@ -1,0 +1,471 @@
+$color-blue-dark: #132DB2;
+$color-pink: #EB457E;
+$color-pink-btn: #FF0074;
+$color-blue: #042CB9;
+$color-green: #2CB76B;
+$color-yellow:#FBCA1C;
+$color-blue-text: #052CB9;
+$color-black: rgba(0, 0, 0, 0.70);
+$color-grey: #7D7E80;
+$color-grey2: rgba(125, 126, 128, 0.105);
+$color-white:#fff;
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,600,700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-size: .98vw;
+}
+
+.background-initial {
+    background-color: $color-blue;
+    min-height: 100vh;
+    height: auto;
+    width: 100vw;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
+}
+
+.container {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+// .navbar__brand {
+//     padding-top: 1rem;
+//     padding-bottom: 1rem;
+//     .img-logotype {
+//         height: 1.5rem;
+//     }
+// }
+.navbar__brand {
+    padding-top: 5rem;
+    padding-bottom: 10rem;
+    .img-logotype {
+        height: 7.2rem;
+    }
+}
+
+.montserrat-r {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
+}
+
+.montserrat-b {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+}
+
+.hero-title__text-decoration {
+    width: 68rem;
+    height: 2rem;
+    display: flex;
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+}
+
+.text-decoration__item {
+    width: 25%;
+    height: 100%;
+    &--yellow {
+        background-color: $color-yellow;
+    }
+    &--green {
+        background-color: $color-green;
+    }
+    &--blue {
+        background-color: $color-blue-dark;
+    }
+    &--pink {
+        background-color: $color-pink;
+    }
+}
+
+.hero-title__text-intro {
+    font-size: 9.6rem;
+    color: $color-white;
+}
+
+.hero-title__text-info,
+.hero-login__input,
+.text-extra__text,
+.text-extra__link,
+.hero-login__btn {
+    font-size: 3.6rem;
+    color: $color-white;
+}
+
+.footer__info-text {
+    font-size: 3rem;
+    color: $color-white;
+}
+
+.footer__info-link {
+    font-size: 3.2rem;
+    color: $color-white;
+}
+
+.text-extra__text {
+    color: $color-black;
+}
+
+.text-extra__link {
+    color: $color-blue-text;
+}
+
+.hero-login__input {
+    color: $color-grey;
+    border: solid 0.58rem $color-grey2;
+    background-color: $color-grey2;
+}
+
+.hero-login {
+    background-color: $color-white;
+    border-radius: 2rem;
+    margin-top: 4.5rem;
+    margin-bottom: 4.5rem;
+    padding: 4.5rem;
+    padding-top: 6.5rem;
+    padding-bottom: 6.5rem;
+}
+
+.hero-login__input,
+.hero-login__btn {
+    padding: 4rem;
+    border-radius: 2rem;
+    width: 100%;
+    margin-bottom: 5.4rem;
+}
+
+.hero-login__btn {
+    background-color: $color-pink-btn;
+    border: none;
+    margin-bottom: 7rem;
+}
+
+.text-extra__text {
+    margin-bottom: 2.5rem;
+}
+
+.text-extra__link,
+.text-extra__text {
+    text-align: center;
+    width: 100%;
+}
+
+.hero-login__text-extra {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.footer__double-links,
+.footer,
+.footer__info {
+    display: flex;
+}
+
+.footer {
+    flex-grow: 1;
+    flex-direction: column-reverse;
+    padding-bottom: 3rem;
+    justify-content: space-evenly;
+}
+
+.footer__info {
+    justify-content: center;
+}
+
+.footer__double-links {
+    justify-content: space-between;
+}
+
+.background-info-section {
+    flex-grow: 6;
+    flex-wrap: wrap;
+    display: flex;
+}
+
+@media (min-width: 769px) {
+    .navbar__brand {
+        padding-top: 3rem;
+        padding-bottom: 5rem;
+        &.img-logotype {
+            height: 4.2rem;
+        }
+    }
+    .hero-title__text-intro {
+        font-size: 5rem;
+    }
+    .hero-title__text-decoration {
+        height: 1rem;
+    }
+    .hero-title__text-info,
+    .hero-login__input,
+    .text-extra__text,
+    .text-extra__link,
+    .hero-login__btn {
+        font-size: 2.3rem;
+    }
+    .hero-login__input,
+    .hero-login__btn {
+        padding: 2rem;
+        border-radius: 1rem;
+        margin-bottom: 3.4rem;
+    }
+    .hero-login__input {
+        border: solid 0.34rem $color-grey2
+    }
+    .hero-login {
+        padding-top: 4.5rem;
+        padding-bottom: 4.5rem;
+    }
+    .footer__info {
+        margin-top: 3rem;
+    }
+    .footer__info-link {
+        font-size: 2rem;
+    }
+    .footer__info-text {
+        font-size: 2.3rem;
+    }
+}
+
+@media (min-width: 992px) {
+    .background-initial {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        background-color: #fff;
+    }
+    .background-info-section {
+        // background: url("");
+        align-items: baseline;
+        flex-grow: 8;
+        // background-image: url("../img/background.png");
+        background-image: url("../../../src/assets/img/background.png");
+        background-size: cover;
+    }
+    .hero-title {
+        width: 82%;
+    }
+    .hero-container {
+        flex-grow: 6;
+        padding-bottom: 3rem;
+    }
+    .navbar,
+    .footer {
+        flex-grow: 2;
+        flex-shrink: 1;
+        max-height: 9rem;
+    }
+    .hero-title__text-decoration {
+        width: 62%;
+        height: .77rem;
+        margin-top: 2.5rem;
+        margin-bottom: 2.5rem;
+    }
+    .navbar__brand {
+        padding-top: 3rem;
+        padding-bottom: 0rem;
+        .img-logotype {
+            height: 3.2rem;
+        }
+    }
+    .hero-title__text-intro {
+        font-size: 3.6rem;
+    }
+    .hero-title__text-info,
+    .hero-login__input,
+    .text-extra__text,
+    .text-extra__link,
+    .hero-login__btn {
+        font-size: 1.5rem;
+    }
+    .hero-login__input,
+    .hero-login__btn {
+        padding: 1.7rem;
+        border-radius: 1rem;
+        margin-bottom: 1.4rem;
+    }
+    .hero-login__input {
+        color: #7D7E80;
+        border: solid 0.18rem $color-grey2;
+    }
+    .hero-login__btn {
+        margin-bottom: 4rem;
+    }
+    .hero-login {
+        border-radius: 1rem;
+        margin-top: 3.5rem;
+        margin-bottom: 3.5rem;
+        padding: 2.5rem;
+        padding-top: 3.5rem;
+        padding-bottom: 3.5rem;
+    }
+    .text-extra__link,
+    .text-extra__text {
+        width: auto;
+        margin-bottom: 0.5rem;
+    }
+    .hero-login__text-extra {
+        justify-content: space-around;
+    }
+    .hero-container {
+        display: flex;
+        align-items: center;
+        &__content-text,
+        &__content-login {
+            width: 50%;
+        }
+    }
+    .footer {
+        justify-content: flex-start;
+        flex-direction: row;
+        align-items: center;
+        padding-bottom: 2rem;
+        padding-top: 2rem;
+        max-height: 8rem;
+        &__info {
+            width: 50%;
+            margin-top: 0;
+            justify-content: flex-start;
+            &-text,
+            &-link {
+                color: $color-black;
+                font-size: 1.2rem;
+            }
+            &-link {
+                color: $color-blue-text
+            }
+        }
+        &__double-links {
+            justify-content: space-around;
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: 1200px) {
+    .background-info-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .navbar__brand {
+        padding-top: 2rem;
+        .img-logotype {
+            height: 2.2rem;
+        }
+    }
+    .hero-login__input,
+    .hero-login__btn {
+        padding: 1.27rem;
+        border-radius: .6rem;
+        margin-bottom: 1.4rem;
+    }
+    .hero-login {
+        padding-top: 2.5rem;
+        padding-bottom: 2.5rem;
+    }
+    .hero-login__btn {
+        margin-bottom: 2.4rem;
+    }
+    .hero-title__text-info {
+        font-size: 1.1rem;
+        padding-right: 15%;
+    }
+    .hero-login__btn {
+        font-size: 1rem;
+    }
+    .hero-login__input,
+    .text-extra__text,
+    .text-extra__link,
+    .footer__info-text,
+    .footer__info-link {
+        font-size: .86rem;
+    }
+    .hero-container__content-login {
+        width: 40%;
+    }
+    .hero-container {
+        justify-content: space-between;
+    }
+    .hero-title {
+        width: 90%;
+    }
+    .hero-login__input {
+        border-width: 0.12em;
+    }
+    .hero-title__text-intro {
+        font-size: 3.45rem;
+        padding-right: 15%;
+    }
+    .footer {
+        padding-bottom: 1rem;
+        padding-top: 1rem;
+        &__info-link {
+            font-weight: 600;
+        }
+    }
+}
+
+@media (min-width: 1444px) {
+    .hero-title__text-intro {
+        padding-right: 0%;
+    }
+}
+
+@media (min-width:1700px) {
+    .hero-container__content-login {
+        width: 45%;
+    }
+    .hero-title__text-intro {
+        font-size: 3rem;
+    }
+}
+
+@media (min-width:1800px) {
+    .container {
+        max-width: 1600px
+    }
+    .hero-container__content-login {
+        width: 40%;
+    }
+}
+
+@media (min-width: 2000px) {
+    .hero-container__content-login {
+        width: 45%;
+    }
+}
