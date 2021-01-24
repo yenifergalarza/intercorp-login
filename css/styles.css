@@ -129,24 +129,14 @@ html {
   color: #fff;
 }
 
-.footer__info-text {
-  font-size: 3rem;
-  color: #fff;
-  text-align: center;
-}
-
-.footer__info-link {
-  text-align: center;
-  font-size: 3.2rem;
-  color: #fff;
-}
-
-.text-extra__text {
-  color: rgba(0, 0, 0, 0.7);
-}
-
-.text-extra__link {
-  color: #052CB9;
+.hero-login {
+  background-color: #fff;
+  border-radius: 2rem;
+  margin-top: 4.5rem;
+  margin-bottom: 4.5rem;
+  padding: 4.5rem;
+  padding-top: 6.5rem;
+  padding-bottom: 6.5rem;
 }
 
 .hero-login__input {
@@ -159,18 +149,7 @@ html {
   background-color: rgba(215, 215, 215, 0.105);
 }
 
-.hero-login {
-  background-color: #fff;
-  border-radius: 2rem;
-  margin-top: 4.5rem;
-  margin-bottom: 4.5rem;
-  padding: 4.5rem;
-  padding-top: 6.5rem;
-  padding-bottom: 6.5rem;
-}
-
-.hero-login__input,
-.hero-login__btn {
+.hero-login__input, .hero-login__btn {
   padding: 4rem;
   border-radius: 2rem;
   width: 100%;
@@ -188,16 +167,6 @@ html {
           transform: scale(1.02);
 }
 
-.text-extra__text {
-  margin-bottom: 2.5rem;
-}
-
-.text-extra__link,
-.text-extra__text {
-  text-align: center;
-  width: 100%;
-}
-
 .hero-login__text-extra {
   width: 100%;
   display: -webkit-box;
@@ -210,15 +179,24 @@ html {
           justify-content: center;
 }
 
-.footer__double-links,
-.footer,
-.footer__info {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+.text-extra__text {
+  margin-bottom: 2.5rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.text-extra__link {
+  color: #052CB9;
+}
+
+.text-extra__link, .text-extra__text {
+  text-align: center;
+  width: 100%;
 }
 
 .footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -webkit-box-flex: 1;
       -ms-flex-positive: 1;
           flex-grow: 1;
@@ -242,6 +220,24 @@ html {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+
+.footer__double-links, .footer__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__info-text {
+  font-size: 3rem;
+  color: #fff;
+  text-align: center;
+}
+
+.footer__info-link {
+  text-align: center;
+  font-size: 3.2rem;
+  color: #fff;
 }
 
 .background-info-section {
@@ -276,18 +272,17 @@ html {
   .hero-login__btn {
     font-size: 2.3rem;
   }
-  .hero-login__input,
-  .hero-login__btn {
-    padding: 2rem;
-    border-radius: 1rem;
-    margin-bottom: 3.4rem;
+  .hero-login {
+    padding-top: 4.5rem;
+    padding-bottom: 4.5rem;
   }
   .hero-login__input {
     border: solid 0.34rem rgba(125, 126, 128, 0.105);
   }
-  .hero-login {
-    padding-top: 4.5rem;
-    padding-bottom: 4.5rem;
+  .hero-login__input, .hero-login__btn {
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-bottom: 3.4rem;
   }
   .footer__info {
     margin-top: 3rem;
@@ -323,6 +318,12 @@ html {
   .hero-title {
     width: 82%;
   }
+  .hero-title__text-decoration {
+    width: 62%;
+    height: .77rem;
+    margin-top: 2.5rem;
+    margin-bottom: 2.5rem;
+  }
   .hero-container {
     -webkit-box-flex: 6;
         -ms-flex-positive: 6;
@@ -337,12 +338,6 @@ html {
     -ms-flex-negative: 1;
         flex-shrink: 1;
     max-height: 9rem;
-  }
-  .hero-title__text-decoration {
-    width: 62%;
-    height: .77rem;
-    margin-top: 2.5rem;
-    margin-bottom: 2.5rem;
   }
   .navbar__brand {
     padding-top: 3rem;
@@ -361,8 +356,15 @@ html {
   .hero-login__btn {
     font-size: 1.5rem;
   }
-  .hero-login__input,
-  .hero-login__btn {
+  .hero-login {
+    border-radius: 1rem;
+    margin-top: 3.5rem;
+    margin-bottom: 3.5rem;
+    padding: 2.5rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+  }
+  .hero-login__input, .hero-login__btn {
     padding: 1.7rem;
     border-radius: 1rem;
     margin-bottom: 1.4rem;
@@ -374,22 +376,14 @@ html {
   .hero-login__btn {
     margin-bottom: 4rem;
   }
-  .hero-login {
-    border-radius: 1rem;
-    margin-top: 3.5rem;
-    margin-bottom: 3.5rem;
-    padding: 2.5rem;
-    padding-top: 3.5rem;
-    padding-bottom: 3.5rem;
+  .hero-login__text-extra {
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
   }
   .text-extra__link,
   .text-extra__text {
     width: auto;
     margin-bottom: 0.5rem;
-  }
-  .hero-login__text-extra {
-    -ms-flex-pack: distribute;
-        justify-content: space-around;
   }
   .hero-container {
     display: -webkit-box;
@@ -457,21 +451,27 @@ html {
   .navbar__brand .img-logotype {
     height: 2.2rem;
   }
-  .hero-login__input,
-  .hero-login__btn {
-    padding: 1.27rem;
-    border-radius: .6rem;
-    margin-bottom: 1.4rem;
-  }
   .hero-login {
     padding-top: 2.5rem;
     padding-bottom: 2.5rem;
   }
+  .hero-login__input, .hero-login__btn {
+    padding: 1.27rem;
+    border-radius: .6rem;
+    margin-bottom: 1.4rem;
+  }
   .hero-login__btn {
     margin-bottom: 2.4rem;
   }
+  .hero-title {
+    width: 90%;
+  }
   .hero-title__text-info {
     font-size: 1.1rem;
+    padding-right: 15%;
+  }
+  .hero-title__text-intro {
+    font-size: 3.45rem;
     padding-right: 15%;
   }
   .hero-login__btn {
@@ -484,23 +484,16 @@ html {
   .footer__info-link {
     font-size: .86rem;
   }
-  .hero-container__content-login {
-    width: 40%;
-  }
   .hero-container {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
-  .hero-title {
-    width: 90%;
+  .hero-container__content-login {
+    width: 40%;
   }
   .hero-login__input {
     border-width: 0.12em;
-  }
-  .hero-title__text-intro {
-    font-size: 3.45rem;
-    padding-right: 15%;
   }
   .footer {
     padding-bottom: 1rem;

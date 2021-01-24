@@ -55,15 +55,16 @@
                     </div>
                 </div>
                 <div class="hero-container__content-login">
-                    <div class="hero-login">
-                        <input class="hero-login__input text-sz1 montserrat-r" type="number" name="" id="" placeholder="Nro. de documento de identidad ">
+                    <form class="hero-login">
+                        <input class="hero-login__input text-sz1 montserrat-r" pattern="[0-9]+{8}" required type="number" maxlength="8" name="dni" id="dni" placeholder="Nro. de documento de identidad " />
+
                         <button class="hero-login__btn montserrat-b"> Iniciar sesión</button>
                         <div class="hero-login__text-extra">
                             <p class="text-extra__text montserrat-r">¡Únete hoy mismo a Somos Intercorp!</p>
                             <a href="#" class="text-extra__link montserrat-b"> Regístrate</a>
                         </div>
 
-                    </div>
+                    </form>
                 </div>
 
             </main>

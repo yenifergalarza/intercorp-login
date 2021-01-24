@@ -68,13 +68,6 @@ html {
     margin-left: auto;
 }
 
-// .navbar__brand {
-//     padding-top: 1rem;
-//     padding-bottom: 1rem;
-//     .img-logotype {
-//         height: 1.5rem;
-//     }
-// }
 .navbar__brand {
     padding-top: 5rem;
     padding-bottom: 10rem;
@@ -132,36 +125,6 @@ html {
     color: $color-white;
 }
 
-.footer__info-text {
-    font-size: 3rem;
-    color: $color-white;
-    text-align: center;
-}
-
-.footer__info-link {
-    text-align: center;
-    font-size: 3.2rem;
-    color: $color-white;
-}
-
-.text-extra__text {
-    color: $color-black;
-}
-
-.text-extra__link {
-    color: $color-blue-text;
-}
-
-.hero-login__input {
-    color: $color-grey;
-    border: solid 0.58rem $color-grey2;
-    background-color: $color-grey2;
-    &:active,
-    &:focus {
-        background-color: rgba(215, 215, 215, 0.105);
-    }
-}
-
 .hero-login {
     background-color: $color-white;
     border-radius: 2rem;
@@ -170,61 +133,81 @@ html {
     padding: 4.5rem;
     padding-top: 6.5rem;
     padding-bottom: 6.5rem;
-}
-
-.hero-login__input,
-.hero-login__btn {
-    padding: 4rem;
-    border-radius: 2rem;
-    width: 100%;
-    margin-bottom: 5.4rem;
-}
-
-.hero-login__btn {
-    background-color: $color-pink-btn;
-    border: none;
-    margin-bottom: 7rem;
-    &:active {
-        transform: scale(1.02);
+    &__input {
+        color: $color-grey;
+        border: solid 0.58rem $color-grey2;
+        background-color: $color-grey2;
+        &:active,
+        &:focus {
+            background-color: rgba(215, 215, 215, 0.105);
+        }
+    }
+    &__input,
+    &__btn {
+        padding: 4rem;
+        border-radius: 2rem;
+        width: 100%;
+        margin-bottom: 5.4rem;
+    }
+    &__btn {
+        background-color: $color-pink-btn;
+        border: none;
+        margin-bottom: 7rem;
+        &:active {
+            transform: scale(1.02);
+        }
+    }
+    &__text-extra {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
     }
 }
 
-.text-extra__text {
-    margin-bottom: 2.5rem;
-}
-
-.text-extra__link,
-.text-extra__text {
-    text-align: center;
-    width: 100%;
-}
-
-.hero-login__text-extra {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.footer__double-links,
-.footer,
-.footer__info {
-    display: flex;
+.text-extra {
+    &__text {
+        margin-bottom: 2.5rem;
+        color: $color-black;
+    }
+    &__link {
+        color: $color-blue-text;
+    }
+    &__link,
+    &__text {
+        text-align: center;
+        width: 100%;
+    }
 }
 
 .footer {
+    display: flex;
     flex-grow: 1;
     flex-direction: column-reverse;
     padding-bottom: 3rem;
     justify-content: space-evenly;
-}
-
-.footer__info {
-    justify-content: center;
-}
-
-.footer__double-links {
-    justify-content: space-between;
+    &__info {
+        justify-content: center;
+    }
+    &__double-links {
+        justify-content: space-between;
+    }
+    &__double-links,
+    &__info {
+        display: flex;
+    }
+    &__info {
+        &-text {
+            font-size: 3rem;
+            color: $color-white;
+            text-align: center;
+        }
+        &-link {
+            text-align: center;
+            font-size: 3.2rem;
+            color: $color-white;
+        }
+    }
 }
 
 .background-info-section {
@@ -241,11 +224,13 @@ html {
             height: 4.2rem;
         }
     }
-    .hero-title__text-intro {
-        font-size: 5rem;
-    }
-    .hero-title__text-decoration {
-        height: 1rem;
+    .hero-title {
+        &__text-intro {
+            font-size: 5rem;
+        }
+        &__text-decoration {
+            height: 1rem;
+        }
     }
     .hero-title__text-info,
     .hero-login__input,
@@ -254,18 +239,18 @@ html {
     .hero-login__btn {
         font-size: 2.3rem;
     }
-    .hero-login__input,
-    .hero-login__btn {
-        padding: 2rem;
-        border-radius: 1rem;
-        margin-bottom: 3.4rem;
-    }
-    .hero-login__input {
-        border: solid 0.34rem $color-grey2
-    }
     .hero-login {
         padding-top: 4.5rem;
         padding-bottom: 4.5rem;
+        &__input {
+            border: solid 0.34rem $color-grey2
+        }
+        &__input,
+        &__btn {
+            padding: 2rem;
+            border-radius: 1rem;
+            margin-bottom: 3.4rem;
+        }
     }
     .footer__info {
         margin-top: 3rem;
@@ -285,15 +270,19 @@ html {
         background-color: #fff;
     }
     .background-info-section {
-        // background: url("");
         align-items: baseline;
         flex-grow: 8;
-        // background-image: url("../img/background.png");
         background-image: url("../../../src/assets/img/background.png");
         background-size: cover;
     }
     .hero-title {
         width: 82%;
+        &__text-decoration {
+            width: 62%;
+            height: .77rem;
+            margin-top: 2.5rem;
+            margin-bottom: 2.5rem;
+        }
     }
     .hero-container {
         flex-grow: 6;
@@ -304,12 +293,6 @@ html {
         flex-grow: 2;
         flex-shrink: 1;
         max-height: 9rem;
-    }
-    .hero-title__text-decoration {
-        width: 62%;
-        height: .77rem;
-        margin-top: 2.5rem;
-        margin-bottom: 2.5rem;
     }
     .navbar__brand {
         padding-top: 3rem;
@@ -328,19 +311,6 @@ html {
     .hero-login__btn {
         font-size: 1.5rem;
     }
-    .hero-login__input,
-    .hero-login__btn {
-        padding: 1.7rem;
-        border-radius: 1rem;
-        margin-bottom: 1.4rem;
-    }
-    .hero-login__input {
-        color: #7D7E80;
-        border: solid 0.18rem $color-grey2;
-    }
-    .hero-login__btn {
-        margin-bottom: 4rem;
-    }
     .hero-login {
         border-radius: 1rem;
         margin-top: 3.5rem;
@@ -348,14 +318,27 @@ html {
         padding: 2.5rem;
         padding-top: 3.5rem;
         padding-bottom: 3.5rem;
+        &__input,
+        &__btn {
+            padding: 1.7rem;
+            border-radius: 1rem;
+            margin-bottom: 1.4rem;
+        }
+        &__input {
+            color: #7D7E80;
+            border: solid 0.18rem $color-grey2;
+        }
+        &__btn {
+            margin-bottom: 4rem;
+        }
+        &__text-extra {
+            justify-content: space-around;
+        }
     }
     .text-extra__link,
     .text-extra__text {
         width: auto;
         margin-bottom: 0.5rem;
-    }
-    .hero-login__text-extra {
-        justify-content: space-around;
     }
     .hero-container {
         display: flex;
@@ -406,22 +389,29 @@ html {
             height: 2.2rem;
         }
     }
-    .hero-login__input,
-    .hero-login__btn {
-        padding: 1.27rem;
-        border-radius: .6rem;
-        margin-bottom: 1.4rem;
-    }
     .hero-login {
         padding-top: 2.5rem;
         padding-bottom: 2.5rem;
+        &__input,
+        &__btn {
+            padding: 1.27rem;
+            border-radius: .6rem;
+            margin-bottom: 1.4rem;
+        }
+        &__btn {
+            margin-bottom: 2.4rem;
+        }
     }
-    .hero-login__btn {
-        margin-bottom: 2.4rem;
-    }
-    .hero-title__text-info {
-        font-size: 1.1rem;
-        padding-right: 15%;
+    .hero-title {
+        width: 90%;
+        &__text-info {
+            font-size: 1.1rem;
+            padding-right: 15%;
+        }
+        &__text-intro {
+            font-size: 3.45rem;
+            padding-right: 15%;
+        }
     }
     .hero-login__btn {
         font-size: 1rem;
@@ -433,21 +423,14 @@ html {
     .footer__info-link {
         font-size: .86rem;
     }
-    .hero-container__content-login {
-        width: 40%;
-    }
     .hero-container {
         justify-content: space-between;
-    }
-    .hero-title {
-        width: 90%;
+        &__content-login {
+            width: 40%;
+        }
     }
     .hero-login__input {
         border-width: 0.12em;
-    }
-    .hero-title__text-intro {
-        font-size: 3.45rem;
-        padding-right: 15%;
     }
     .footer {
         padding-bottom: 1rem;
