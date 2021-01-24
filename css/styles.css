@@ -8,6 +8,9 @@
 
 *:focus {
   outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
 html {
@@ -129,9 +132,11 @@ html {
 .footer__info-text {
   font-size: 3rem;
   color: #fff;
+  text-align: center;
 }
 
 .footer__info-link {
+  text-align: center;
   font-size: 3.2rem;
   color: #fff;
 }
@@ -148,6 +153,10 @@ html {
   color: #7D7E80;
   border: solid 0.58rem rgba(125, 126, 128, 0.105);
   background-color: rgba(125, 126, 128, 0.105);
+}
+
+.hero-login__input:active, .hero-login__input:focus {
+  background-color: rgba(215, 215, 215, 0.105);
 }
 
 .hero-login {
@@ -172,6 +181,11 @@ html {
   background-color: #FF0074;
   border: none;
   margin-bottom: 7rem;
+}
+
+.hero-login__btn:active {
+  -webkit-transform: scale(1.02);
+          transform: scale(1.02);
 }
 
 .text-extra__text {
@@ -241,7 +255,7 @@ html {
   display: flex;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 630px) {
   .navbar__brand {
     padding-top: 3rem;
     padding-bottom: 5rem;
@@ -413,6 +427,9 @@ html {
   .footer__info-text, .footer__info-link {
     color: rgba(0, 0, 0, 0.7);
     font-size: 1.2rem;
+  }
+  .footer__info-text {
+    text-align: left;
   }
   .footer__info-link {
     color: #052CB9;

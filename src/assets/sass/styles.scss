@@ -16,6 +16,9 @@ $color-white:#fff;
     box-sizing: border-box;
     &:focus {
         outline: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+        appearance: none;
     }
 }
 
@@ -132,9 +135,11 @@ html {
 .footer__info-text {
     font-size: 3rem;
     color: $color-white;
+    text-align: center;
 }
 
 .footer__info-link {
+    text-align: center;
     font-size: 3.2rem;
     color: $color-white;
 }
@@ -151,6 +156,10 @@ html {
     color: $color-grey;
     border: solid 0.58rem $color-grey2;
     background-color: $color-grey2;
+    &:active,
+    &:focus {
+        background-color: rgba(215, 215, 215, 0.105);
+    }
 }
 
 .hero-login {
@@ -175,6 +184,9 @@ html {
     background-color: $color-pink-btn;
     border: none;
     margin-bottom: 7rem;
+    &:active {
+        transform: scale(1.02);
+    }
 }
 
 .text-extra__text {
@@ -221,7 +233,7 @@ html {
     display: flex;
 }
 
-@media (min-width: 769px) {
+@media (min-width: 630px) {
     .navbar__brand {
         padding-top: 3rem;
         padding-bottom: 5rem;
@@ -368,6 +380,9 @@ html {
             &-link {
                 color: $color-black;
                 font-size: 1.2rem;
+            }
+            &-text {
+                text-align: left;
             }
             &-link {
                 color: $color-blue-text
